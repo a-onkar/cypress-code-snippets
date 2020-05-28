@@ -4,19 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "opency": "./node_modules/.bin/cypress open",
-    "test": "./node_modules/.bin/cypress run"
+    "cy:open": "./node_modules/.bin/cypress open",
+    "cy:run": "./node_modules/.bin/cypress run"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^4.3.0",
-    "cypress-multi-reporters": "^1.2.4",
+    "cypress": "^4.7.0",
+    "cypress-xpath": "^1.4.0",
     "mocha": "^5.2.0",
-    "mocha-junit-reporter": "^1.23.3",
-    "mocha-multi-reporters": "^1.1.7",
-    "mochawesome": "^5.0.0",
-    "mochawesome-merge": "^4.0.3",
-    "mochawesome-report-generator": "^4.1.0"
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.0.3"
   }
 }

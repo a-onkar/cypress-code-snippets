@@ -15,7 +15,7 @@ describe('Testing ToDo Add & Clear', ()=>{
     it('Marking todo as completed', () =>{
         cy.get('.toggle').click()
         cy.get('.toggle').should('be.checked')   
-        cy.get('label').should('have.css', 'text-decoration-line', 'line-through')
+        cy.get('label').should('have.css', 'text-decoration-line', 'line-through')  //Verifies the item text is strikethrough
     })
     
     it('Clearing todo list', () =>{
