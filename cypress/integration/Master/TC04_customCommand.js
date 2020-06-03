@@ -4,7 +4,7 @@
 describe('Learning URL related commands - QA Milestone', () => {
 
     before(() => {
-        cy.Login()      // The login function is defined in custom commands
+        cy.ToDoLogin()      // The login function is defined in custom commands
     })
 
     it('Create a Post', () => {
