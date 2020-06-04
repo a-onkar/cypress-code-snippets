@@ -33,8 +33,8 @@ Branch experimental set up to track remote branch experimental from origin.
 Switched to a new branch 'experimental'
 
 # Our case:
-git checkout origin/Web-Elements
-git checkout Web-Elements
+$ git checkout origin/Web-Elements
+$ git checkout Web-Elements
 
 or
 
