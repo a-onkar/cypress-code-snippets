@@ -6,9 +6,11 @@ describe('Learning URL related commands - QA Milestone', () => {
 
     it('Login', () => {
         cy.visit('https://react-redux.realworld.io/#/login')
+
         cy.title().should('eq', 'Conduit')  // Verifying title using assertions
-        // Verify the protocol is HTTPS
-        cy.location('protocol').should('equal', 'https:')
+
+        cy.location('protocol').should('equal', 'https:') // Verify the protocol is HTTPS
+
         cy.get('input[type="email"]').should('be.enabled').clear().type('anandteerthonkar@gmail.com')
         cy.get('input[type="password"]').should('be.enabled').clear().type('Test123!')
         cy.get('.btn').contains('Sign in').should('be.visible').click()
@@ -18,6 +20,7 @@ describe('Learning URL related commands - QA Milestone', () => {
 
     it('Create a Post', () => {
         cy.contains('New Post').click()
+
         cy.hash().should('include', '#/editor')  // Verifying hash from url - using hash()
         cy.location('hash').should('include', '#/editor') // Verifying hash from url - using location()
 
@@ -25,7 +28,8 @@ describe('Learning URL related commands - QA Milestone', () => {
         cy.get('input[placeholder="What\'s this article about?"]').should('be.enabled').type('Using URL related commands')
         cy.get('textarea[placeholder="Write your article (in markdown)"]').type('Wrote the article')
         cy.contains('Publish Article').click()
-        cy.url().should('include', 'article')
+
+        cy.url().should('include', 'article')  // url() - Extracts url of the current page
 
         cy.get(':nth-child(4) > .nav-link').click()
         cy.contains('My Articles').should('be.visible')
@@ -43,7 +47,7 @@ describe('Learning URL related commands - QA Milestone', () => {
 
         // cy.get(':nth-child(1) > .article-meta > .pull-xs-right > .btn > .ion-heart').click()
         cy.get('.ion-heart').click()
-        cy.reload()
+        cy.reload()   //reload the current page
 
         cy.contains('No articles are here... yet.').should('be.visible')
 

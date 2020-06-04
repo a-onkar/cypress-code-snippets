@@ -9,7 +9,7 @@ describe('Understanding get command', () => {
         
         cy.get('input[name="password"]').type('demo')
         
-        cy.get('input[type="submit"]').click()
+        // cy.get('input[type="submit"]').click()
 
     })
 
