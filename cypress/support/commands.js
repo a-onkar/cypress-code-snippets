@@ -1,6 +1,6 @@
 
 
-Cypress.Commands.add("Login", ()=>{
+Cypress.Commands.add("ToDoLogin", ()=>{
     cy.visit('https://react-redux.realworld.io/#/login')
     cy.title().should('eq', 'Conduit')  // Verifying title using assertions
     // Verify the protocol is HTTPS
